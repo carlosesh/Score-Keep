@@ -20,7 +20,9 @@ const renderPlayers = (playersList) => {
 const PlayerList = (props) => {
     return (
         <div>
-            {renderPlayers(props.players)}
+            <FlipMove>
+                {renderPlayers(props.players)}
+            </FlipMove>
         </div>
     );
 };
