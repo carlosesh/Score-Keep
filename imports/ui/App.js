@@ -11,7 +11,7 @@ const App = (props) => {
             <TitleBar title={props.title} subtitle='Created by Carlos Sanchez'/>
             <div className='wrapper'>
                 <PlayerList players={props.players} />
-                <AddPlayer />
+                <AddPlayer/>
             </div>
         </div>
     );
