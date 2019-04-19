@@ -1,0 +1,13 @@
+.title-bar {
+    background-color: #e35557;
+    color: white;
+    &:root {
+        flexGrow: 1,
+      };
+}
+
+.title-bar__subtitle {
+    margin: 1px;
+    font-size: 1.3rem;
+    font-weight: 400;
+}
