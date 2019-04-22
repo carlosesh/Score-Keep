@@ -24,7 +24,7 @@ const renderPlayers = (playersList) => {
 
 const PlayerList = (props) => {
     return (
-            <FlipMove>
+            <FlipMove maintainContainerHeight={true}>
                 {renderPlayers(props.players)}
             </FlipMove>
     );
