@@ -11,8 +11,12 @@ const renderPlayers = (playersList) => {
             </div>
         );
     } else {
-        return playersList.map((player) => {
-            return <Player key={player._id} player={player} />;
+        return playersList.map((player, index) => {
+            return (
+                <div key={player._id}>
+                    <Player key={player._id} player={player} />
+                </div>
+            );
         });
     }
 };

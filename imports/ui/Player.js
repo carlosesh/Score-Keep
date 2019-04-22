@@ -3,15 +3,20 @@ import PropTypes from 'prop-types';
 
 import { Players } from './../api/players';
 
+let itemClassName = (props) => {
+    return `item item--position-${props.player.rank}`
+};
+
+
 const Player = (props) => {
     return (
         <div>
-            <div key={props.player._id} className='item'>
+            <div key={props.player._id} className={itemClassName(props)}>
                 <div className='player'>
                     <div>
                         <h3 className='player__name'>{props.player.name}</h3>
                         <p className='player__stats'>
-                            has {props.player.score} point(s).
+                            {props.player.rank} {props.player.position} {props.player.score} point(s)
                     </p>
                     </div>
                     <div className='player__actions'>
