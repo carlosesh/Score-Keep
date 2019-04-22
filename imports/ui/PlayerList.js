@@ -4,6 +4,7 @@ import FlipMove from 'react-flip-move';
 
 
 const renderPlayers = (playersList) => {
+    
     if (playersList.length === 0) {
         return (
             <div className='item' >
@@ -11,7 +12,7 @@ const renderPlayers = (playersList) => {
             </div>
         );
     } else {
-        return playersList.map((player, index) => {
+        return playersList.map((player) => {
             return (
                 <div key={player._id}>
                     <Player key={player._id} player={player} />
@@ -23,11 +24,9 @@ const renderPlayers = (playersList) => {
 
 const PlayerList = (props) => {
     return (
-        <div>
             <FlipMove>
                 {renderPlayers(props.players)}
             </FlipMove>
-        </div>
     );
 };
 
